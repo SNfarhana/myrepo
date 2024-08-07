@@ -35,7 +35,7 @@
       <!-- Tomcat Maven Plugin -->
       <plugin>
         <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-maven-plugin</artifactId>
+        <artifactId>tomcat9-maven-plugin</artifactId>
         <version>2.2</version>
         <configuration>
           <url>http://localhost:8080/manager/text</url>
@@ -44,6 +44,7 @@
         </configuration>
       </plugin>
     </plugins>
+    
   </build>
 
   <!-- Server configuration should be in your Maven settings.xml, not in the pom.xml -->
@@ -58,5 +59,12 @@
         </server>
     </servers>
   </settings>
+  <resources>
+    <resource>
+      <directory>src/main/java/com/example</directory>
+      <filtering>true</filtering>
+    </resource>
+  </resources>
+    
 
 </project>
