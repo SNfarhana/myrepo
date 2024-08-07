@@ -65,11 +65,4 @@
     
   </build>
 
-  <distributionManagement>
-    <repository>
-      <id>my-repo</id>
-      <url>http://my-repo-url</url>
-    </repository>
-  </distributionManagement>
-
 </project>
