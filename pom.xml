@@ -24,38 +24,19 @@
     <plugins>
       <!-- Maven Compiler Plugin -->
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat9-maven-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-
-      <!-- Maven WAR Plugin -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.1</version>
-        <configuration>
-          <failOnMissingWebXml>false</failOnMissingWebXml> <!-- Optional, if you don't have web.xml -->
-        </configuration>
-      </plugin>
-
-      <!-- Tomcat Maven Plugin -->
-      <plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-maven-plugin</artifactId>
-        <version>2.2</version>
-        <configuration>
+          <path>/${project.artifactId}##${project.version}</path>
           <url>http://localhost:8080/manager/text</url>
-          <server>TomcatServer</server>
-          <path>/my-project</path>
+          <username>admin</username>
+          <password>adminadmin</password>
+          update<true</update>
         </configuration>
       </plugin>
     </plugins>
-    
+
     <resources>
       <resource>
         <directory>src/main/resources</directory>
