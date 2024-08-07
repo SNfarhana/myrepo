@@ -61,7 +61,7 @@
   </settings>
   <resources>
     <resource>
-      <directory>src/main/java/com/example</directory>
+      <directory>src/main/resources</directory>
       <filtering>true</filtering>
     </resource>
   </resources>
