@@ -33,11 +33,14 @@
         </configuration>
       </plugin>
 
-      <!-- Updated Maven WAR Plugin -->
+      <!-- Maven WAR Plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.3.1</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml> <!-- Optional, if you don't have web.xml -->
+        </configuration>
       </plugin>
 
       <!-- Tomcat Maven Plugin -->
@@ -52,13 +55,21 @@
         </configuration>
       </plugin>
     </plugins>
-
+    
     <resources>
       <resource>
         <directory>src/main/resources</directory>
         <filtering>true</filtering>
       </resource>
     </resources>
+    
   </build>
+
+  <distributionManagement>
+    <repository>
+      <id>my-repo</id>
+      <url>http://my-repo-url</url>
+    </repository>
+  </distributionManagement>
 
 </project>
