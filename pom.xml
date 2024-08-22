@@ -28,6 +28,10 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.4.0</version>
+                <configuration>
+                    <!-- Optional: Uncomment if you want to specify web.xml location explicitly -->
+                    <!-- <webXml>src/main/webapp/WEB-INF/web.xml</webXml> -->
+                </configuration>
             </plugin>
             
             <!-- Maven Tomcat Plugin -->
@@ -44,13 +48,13 @@
                 </configuration>
             </plugin>
         </plugins>
-        
+
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
-        
     </build>
+
 </project>
